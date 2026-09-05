@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aetheris: UTBK & TKA Learning System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="top-bar">
+    <button id="menu-trigger" class="menu-btn" aria-label="Buka Menu">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </button>
+    <div class="brand-title" id="brand-home">AETHERIS<span>.os</span></div>
+    
+    <div class="theme-selector-wrapper">
+      <button id="theme-current-btn" class="theme-current-btn" aria-label="Pilih Tema">
+        <span class="theme-icon">🌙</span>
+        <span class="theme-name">Dark</span>
+      </button>
+      <div id="theme-dropdown" class="theme-dropdown">
+        <button class="theme-option" data-theme="dark"><span>🌙</span> Dark Mode</button>
+        <button class="theme-option" data-theme="light"><span>☀️</span> Light Mode</button>
+      </div>
+    </div>
+  </header>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    <div class="sidebar-content">
+      <div class="profile-card">
+        <div class="profile-avatar">U</div>
+        <div class="profile-info">
+          <h3>Siswa Taruna</h3>
+          <p class="eyebrow">Kelas 11-12 &middot; UTBK 2027-2028</p>
+          <span class="badge-location">Pangkalan Kerinci</span>
+        </div>
+      </div>
+      <div class="sidebar-section">
+        <p class="section-label">Individual</p>
+        <div class="config-item"><span>Neural Engine Status</span><span class="status-indicator online">Aktif</span></div>
+        <div class="config-item"><span>Durasi Belajar Yang Disarankan :</span><span class="status-value">45 Menit</span></div>
+      </div>
+      <nav class="sidebar-nav">
+        <p class="section-label">Main Core</p>
+        <button class="nav-link active" data-target="dashboard">🪐 Dashboard Core</button>
+        <p class="section-label">Subtests Modules</p>
+        <button class="nav-link" data-target="subtest-pu">⚡ Penalaran Umum (PU)</button>
+        <button class="nav-link" data-target="subtest-ppu">🧠 Pengetahuan & Pemahaman (PPU)</button>
+        <button class="nav-link" data-target="subtest-pbm">✍️ Memahami Bacaan & Menulis (PBM)</button>
+        <button class="nav-link" data-target="subtest-pk">📐 Pengetahuan Kuantitatif (PK)</button>
+        <button class="nav-link" data-target="subtest-indo">🇮🇩 Literasi B. Indonesia</button>
+        <button class="nav-link" data-target="subtest-inggris">🇬🇧 Literasi B. Inggris</button>
+        <button class="nav-link" data-target="subtest-pm">🧮 Penalaran Matematika (PM)</button>
+      </nav>
+    </div>
+  </aside>
+
+  <main class="main-matrix" id="main-content">
+    <section id="view-dashboard" class="matrix-view active">
+      <div class="welcome-banner">
+        <p class="eyebrow-glow">Sistem Navigasi Belajar UTBK 2024-2026</p>
+        <h1>Akses Modul Kognitif UTBK</h1>
+        <p class="sub-text">Pilih salah satu dari 7 simpul subtes di bawah ini untuk memulai sinkronisasi materi komprehensif dan latihan soal dinamis berbasis AI tingkat HOTS (High Order Thinking Skills).</p>
+      </div>
+      <div class="node-grid">
+        <div class="node-card" data-gate="subtest-pu"><div class="node-icon">⚡</div><h3>Penalaran Umum</h3><p>Induktif, Deduktif, & Kuantitatif</p><span class="node-tag tps">TPS Module</span></div>
+        <div class="node-card" data-gate="subtest-ppu"><div class="node-icon">🧠</div><h3>Pengetahuan & Pemahaman Umum</h3><p>Penguasaan kata & konteks kebahasaan</p><span class="node-tag tps">TPS Module</span></div>
+        <div class="node-card" data-gate="subtest-pbm"><div class="node-icon">✍️</div><h3>Memahami Bacaan & Menulis</h3><p>Ejaan, tata bahasa, & kepaduan teks</p><span class="node-tag tps">TPS Module</span></div>
+        <div class="node-card" data-gate="subtest-pk"><div class="node-icon">📐</div><h3>Pengetahuan Kuantitatif</h3><p>Aljabar, geometri, & matematika dasar</p><span class="node-tag tps">TPS Module</span></div>
+        <div class="node-card" data-gate="subtest-indo"><div class="node-icon">🇮🇩</div><h3>Literasi B. Indonesia</h3><p>Evaluasi, analisis, & rekonsiliasi teks</p><span class="node-tag lit">Literasi Module</span></div>
+        <div class="node-card" data-gate="subtest-inggris"><div class="node-icon">🇬🇧</div><h3>Literasi B. Inggris</h3><p>Extracting info & reading comprehension</p><span class="node-tag lit">Literasi Module</span></div>
+        <div class="node-card" data-gate="subtest-pm"><div class="node-icon">🧮</div><h3>Penalaran Matematika</h3><p>Pemecahan masalah dalam konteks nyata</p><span class="node-tag lit">Literasi Module</span></div>
+      </div>
+    </section>
+
+    <section id="view-subtest" class="matrix-view">
+      <button class="btn-back" id="btn-back-dashboard">← Kembali ke Dashboard</button>
+      <div class="subtest-header">
+        <span class="node-tag" id="subtest-category">-</span>
+        <h1 id="subtest-title">Nama Subtest</h1>
+        <p id="subtest-desc" class="sub-text">Deskripsi subtest.</p>
+      </div>
+      <div class="subtest-tabs">
+        <button class="sub-tab-btn active" data-mode="materi">📚 Rumah Materi</button>
+        <button class="sub-tab-btn" data-mode="latihan-ai">🤖 Latihan AI (Generate)</button>
+        <button class="sub-tab-btn" data-mode="latihan-sim">📝 Simulasi Bank Soal</button>
+      </div>
+
+      <div id="panel-materi" class="sub-panel active">
+        <div class="timer-control-box">
+          <div class="timer-toggle-row">
+            <label class="switch-container">
+              <input type="checkbox" id="timer-toggle-switch">
+              <span class="slider"></span>
+            </label>
+            <span class="timer-label">Aktifkan Timer Belajar</span>
+          </div>
+          <div id="timer-custom-input-row" class="timer-custom-input-row" style="display:none; margin-top:14px;">
+            <span class="timer-label" style="font-size:0.8rem; margin-right:8px;">Atur Waktu:</span>
+            <input type="number" id="timer-input-hours" class="timer-input-num" min="0" max="23" value="0" placeholder="Jam">
+            <span class="timer-colon">:</span>
+            <input type="number" id="timer-input-minutes" class="timer-input-num" min="0" max="59" value="25" placeholder="Menit">
+            <span class="timer-colon">:</span>
+            <input type="number" id="timer-input-seconds" class="timer-input-num" min="0" max="59" value="0" placeholder="Detik">
+            <button id="btn-timer-apply" class="btn-action" style="margin-left:8px; padding:4px 14px; font-size:0.8rem;">Set</button>
+          </div>
+          <div id="chrono-display-container" class="chrono-display hidden">
+            <div class="time-digits" id="timer-digits">25:00</div>
+            <div class="timer-actions">
+              <button id="btn-timer-state" class="btn-action">Start</button>
+              <button id="btn-timer-reset" class="btn-action shadow">Reset</button>
+            </div>
+          </div>
+        </div>
+        <div id="materi-dynamic-content" class="materi-render-zone"></div>
+      </div>
+
+      <div id="panel-latihan-ai" class="sub-panel" style="display: none;"></div>
+      <div id="panel-latihan-sim" class="sub-panel" style="display: none;"></div>
+    </section>
+  </main>
+
+  <div id="floating-timer" class="floating-timer hidden">
+    <div id="ft-drag-handle" class="ft-drag-handle" title="Geser untuk memindahkan">
+      <span class="ft-drag-icon">⠿</span>
+    </div>
+    <span id="ft-digits" class="ft-digits">25:00</span>
+    <button id="ft-pause-btn" class="ft-btn" title="Pause/Resume">⏸️</button>
+    <button id="ft-close-btn" class="ft-btn" title="Tutup Timer">✖️</button>
+  </div>
+
+  <button id="floating-chat-btn" class="floating-chat-btn">💬 Tanya AI</button>
+  
+  <div id="chat-modal" class="chat-modal">
+    <div id="chat-resize-handle" class="chat-resize-handle"></div>
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <div class="chat-avatar">AI</div>
+        <div>
+          <h3>Aether</h3>
+          <span class="chat-status online"><span class="pulse-dot"></span> Online</span>
+        </div>
+      </div>
+    </div>
+    <div id="chat-history" class="chat-history">
+      <div class="chat-message ai-message">
+        <div class="msg-content">Halo! Saya adalah Aether! Buatan Bimo! Saya bisa melihat materi dan soal yang sedang kamu buka. Silakan bertanya jika ada yang bingung!</div>
+        <div class="msg-actions">
+          <button class="msg-action-btn copy-btn" title="Salin">📋 Salin</button>
+        </div>
+      </div>
+    </div>
+    <div class="chat-input-area">
+      <input type="text" id="chat-input" class="chat-input" placeholder="Ketik pertanyaan Anda...">
+      <button id="send-chat-btn" class="send-chat-btn">Kirim</button>
+      <button id="stop-chat-btn" class="stop-chat-btn hidden">Stop</button>
+    </div>
+  </div>
+
+<script src="app.js"></script>
+</body>
+</html>
