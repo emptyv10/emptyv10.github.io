@@ -1,6 +1,6 @@
 // ====== KONFIGURASI API GROQ (MULTI-KEY ROTATION) ======
 const API_KEYS = [
-    
+    "xpl_4da5bf7bb69602bca0a4eef12e8b746918c259f4"
 ];
 
 let currentKeyIndex = Math.floor(Math.random() * API_KEYS.length);
